@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Make a auto cv</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static "pdf/style.css" %}"
+</head>
+<body>
+    <h1>Auto CV Generator</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <form method="POST">
+                {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="about">About</label>
+                        <input type="text" class="form-control" name="about" id="about" placeholder="About yourself">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputZip">Previous work experience</label>
+                        <input type="text" class="form-control" name="previous_work" id="previous_work" placeholder="Give some previous work">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                        <label for="phone">Phone</label>
+                        <input type="number" class="form-control" name="phone" id="phone" placeholder="+8801XXXXXXXXX">
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="university">University</label>
+                        <input type="text" class="form-control" name="university" id="university" placeholder="Your University">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                            <label for="inputZip">Facebook url</label>
+                            <input type="text" class="form-control" name="facebook_url" id="facebook_url" placeholder="input your facebook url">
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">My Cv</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

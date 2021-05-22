@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+  <title>Resume - {{user_profile.name}} </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "pdf/style.css" %}" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="full-name">
+            <span class="first-name">{{user_profile.name}}</span> 
+            </div>
+            <div class="contact-info">
+            <span class="email">Email: </span>
+            <span class="email-val">{{user_profile.email}}</span>
+            <span class="separator"></span>
+            <span class="phone">Phone: </span>
+            <span class="phone-val">{{user_profile.phone}}</span>
+             | <a href="{{user_profile.facebook_url}}"><i class="fab fa-facebook"></i></a>
+            </div>
+            
+            <div class="about">
+            <span class="position">{{ user_profile.title }}</span>
+            <span class="desc">
+                {{user_profile.about}} 
+            </span>
+            </div>
+        </div>
+        <div class="details">
+            <div class="section">
+            <div class="section__title">Experience</div>
+            <div class="section__list">
+                <div class="section__list-item">
+                    <div class="left">
+                        <div class="name">KlowdBox</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="section">
+            <div class="section__title">Education</div>
+            <div class="section__list">
+                <div class="section__list-item">
+                    <div class="left">
+                        <div class="name">{{user_profile.university}}</div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+            <div class="section">
+            <div class="section__title">Projects</div> 
+            <div class="section__list">
+                <div class="section__list-item">
+                <div class="name">DSP</div>
+                <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+                </div>
+                
+                <div class="section__list-item">
+                            <div class="name">DSP</div>
+                <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="section">
+            <div class="section__title">Skills</div>
+            <div class="skills">
+                <div class="skills__item">
+                <div class="left"><div class="name">
+                    Javascript
+                    </div></div>
+                <div class="right">
+                                <input  id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                                <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck2"></label>
+                                <input id="ck3" type="checkbox" />
+
+                    <label for="ck3"></label>
+                                <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                                <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+
+                </div>
+                </div>
+                
+            </div>
+            <div class="skills__item">
+                <div class="left"><div class="name">
+                    CSS</div></div>
+                <div class="right">
+                                <input  id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                                <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck2"></label>
+                                <input id="ck3" type="checkbox" />
+
+                    <label for="ck3"></label>
+                                <input id="ck4" type="checkbox" />
+                    <label for="ck4"></label>
+                                <input id="ck5" type="checkbox" />
+                    <label for="ck5"></label>
+
+                </div>
+                </div>
+                
+            </div>
+            <div class="section">
+            <div class="section__title">
+            Interests
+            </div>
+            <div class="section__list">
+                <div class="section__list-item">
+                        Football, programming.
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
